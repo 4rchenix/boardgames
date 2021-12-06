@@ -6,27 +6,165 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         <title>Boardgames Kolejowy Szlak</title>
     </head>
 
-    <body>
+<body>
 	<p></p>
-	<button class="btn-home" onclick="window.location.href='../../'"><i class="fa fa-home"></i></button>
+	<button class="btn-home" onclick="window.location.href='../'"><i class="fa fa-home"></i></button>
 	<button class="btn-files" onclick="window.open('https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp','_blank'); return false;"><i class="fa fa-folder"></i></button>
 	<button class="btn-pp" onclick="window.open('https://gameplay.archenix.pl/about-me/','_blank'); return false;"><i class="fa fa-user-circle-o"></i></button>
-	<button class="btn-bgg" onclick="window.open('https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die', '_blank'); return false;"><i class="fa fa-info"></i></button>	 
-	
-	<div class="header">
-		<p>Pick the dice sets:</p>
+	<button class="btn-bgg" onclick="window.open('https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die', '_blank'); return false;"><i class="fa fa-info"></i></button>
+	<div class="wrapper clearfix">
+		<div class="player-0-panel active">
+			<div class="player-name" id="name-0"></div>
+			<div class="player-score" id="score-0"></div>
+			<div class="player-current-box">
+				<div class="player-current-label"></div>
+				<div class="player-current-score" id="current-0"></div>
+			</div>
+		</div>
+		<button class="btn-roll" onclick="roll()"><i class="ion-ios-loop"></i>Roll dice</button>
+
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="arcade">
+			<label class="form-check-label" for="flexCheckDefault" style="color: white;">
+				arcade
+			</label>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="base">
+			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
+				base
+			</label>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="blazing-red">
+			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
+				blazing-red
+			</label>
+		</div>
+
+		<div class="container">
+			<img src="images/arcade/dice01-1.png" alt="Dice" class="diceimg arcade" id="a11">
+			<img src="images/arcade/dice01-2.png" alt="Dice" class="diceimg arcade" id="a12">
+			<img src="images/arcade/dice01-3.png" alt="Dice" class="diceimg arcade" id="a13">
+			<img src="images/arcade/dice01-4.png" alt="Dice" class="diceimg arcade" id="a14">
+			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a15">
+			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a16">
+			<img src="images/arcade/dice02-1.png" alt="Dice" class="diceimg arcade" id="a21">
+			<img src="images/arcade/dice02-2.png" alt="Dice" class="diceimg arcade" id="a22">
+			<img src="images/arcade/dice02-3.png" alt="Dice" class="diceimg arcade" id="a23">
+			<img src="images/arcade/dice02-4.png" alt="Dice" class="diceimg arcade" id="a24">
+			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a25">
+			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a26">
+			<img src="images/arcade/dice03-1.png" alt="Dice" class="diceimg arcade" id="a31">
+			<img src="images/arcade/dice03-2.png" alt="Dice" class="diceimg arcade" id="a32">
+			<img src="images/arcade/dice03-3.png" alt="Dice" class="diceimg arcade" id="a33">
+			<img src="images/arcade/dice03-4.png" alt="Dice" class="diceimg arcade" id="a34">
+			<img src="images/arcade/dice03-5.png" alt="Dice" class="diceimg arcade" id="a35">
+			<img src="images/arcade/dice03-6.png" alt="Dice" class="diceimg arcade" id="a36">
+			<img src="images/arcade/dice04-1.png" alt="Dice" class="diceimg arcade" id="a41">
+			<img src="images/arcade/dice04-2.png" alt="Dice" class="diceimg arcade" id="a42">
+			<img src="images/arcade/dice04-3.png" alt="Dice" class="diceimg arcade" id="a43">
+			<img src="images/arcade/dice04-4.png" alt="Dice" class="diceimg arcade" id="a44">
+			<img src="images/arcade/dice04-5.png" alt="Dice" class="diceimg arcade" id="a45">
+			<img src="images/arcade/dice04-6.png" alt="Dice" class="diceimg arcade" id="a46">
+		</div>
+
+		<div class="container">
+			<img src="images/base/dice01-1.png" alt="Dice" class="diceimg base" id="b11">
+			<img src="images/base/dice01-2.png" alt="Dice" class="diceimg base" id="b12">
+			<img src="images/base/dice01-3.png" alt="Dice" class="diceimg base" id="b13">
+			<img src="images/base/dice01-4.png" alt="Dice" class="diceimg base" id="b14">
+			<img src="images/base/dice01-5.png" alt="Dice" class="diceimg base" id="b15">
+			<img src="images/base/dice01-6.png" alt="Dice" class="diceimg base" id="b16">
+			<img src="images/base/dice02-1.png" alt="Dice" class="diceimg base" id="b21">
+			<img src="images/base/dice02-2.png" alt="Dice" class="diceimg base" id="b22">
+			<img src="images/base/dice02-3.png" alt="Dice" class="diceimg base" id="b23">
+			<img src="images/base/dice02-4.png" alt="Dice" class="diceimg base" id="b24">
+			<img src="images/base/dice01-5.png" alt="Dice" class="diceimg base" id="b25">
+			<img src="images/base/dice01-6.png" alt="Dice" class="diceimg base" id="b26">
+			<img src="images/base/dice03-1.png" alt="Dice" class="diceimg base" id="b31">
+			<img src="images/base/dice03-2.png" alt="Dice" class="diceimg base" id="b32">
+			<img src="images/base/dice03-3.png" alt="Dice" class="diceimg base" id="b33">
+			<img src="images/base/dice03-4.png" alt="Dice" class="diceimg base" id="b34">
+			<img src="images/base/dice03-5.png" alt="Dice" class="diceimg base" id="b35">
+			<img src="images/base/dice03-6.png" alt="Dice" class="diceimg base" id="b36">
+			<img src="images/base/dice04-1.png" alt="Dice" class="diceimg base" id="b41">
+			<img src="images/base/dice04-2.png" alt="Dice" class="diceimg base" id="b42">
+			<img src="images/base/dice04-3.png" alt="Dice" class="diceimg base" id="b43">
+			<img src="images/base/dice04-4.png" alt="Dice" class="diceimg base" id="b44">
+			<img src="images/base/dice04-5.png" alt="Dice" class="diceimg base" id="b45">
+			<img src="images/base/dice04-6.png" alt="Dice" class="diceimg base" id="b46">
+		</div>
+
+		<div class="container">
+			<img src="images/blazing-red/dice01-1.png" alt="Dice" class="diceimg blazing-red" id="br11">
+			<img src="images/blazing-red/dice01-2.png" alt="Dice" class="diceimg blazing-red" id="br12">
+			<img src="images/blazing-red/dice01-3.png" alt="Dice" class="diceimg blazing-red" id="br13">
+			<img src="images/blazing-red/dice01-4.png" alt="Dice" class="diceimg blazing-red" id="br14">
+			<img src="images/blazing-red/dice01-5.png" alt="Dice" class="diceimg blazing-red" id="br15">
+			<img src="images/blazing-red/dice01-6.png" alt="Dice" class="diceimg blazing-red" id="br16">
+			<img src="images/blazing-red/dice02-1.png" alt="Dice" class="diceimg blazing-red" id="br21">
+			<img src="images/blazing-red/dice02-2.png" alt="Dice" class="diceimg blazing-red" id="br22">
+			<img src="images/blazing-red/dice02-3.png" alt="Dice" class="diceimg blazing-red" id="br23">
+			<img src="images/blazing-red/dice02-4.png" alt="Dice" class="diceimg blazing-red" id="br24">
+			<img src="images/blazing-red/dice01-5.png" alt="Dice" class="diceimg blazing-red" id="br25">
+			<img src="images/blazing-red/dice01-6.png" alt="Dice" class="diceimg blazing-red" id="br26">
+			<img src="images/blazing-red/dice03-1.png" alt="Dice" class="diceimg blazing-red" id="br31">
+			<img src="images/blazing-red/dice03-2.png" alt="Dice" class="diceimg blazing-red" id="br32">
+			<img src="images/blazing-red/dice03-3.png" alt="Dice" class="diceimg blazing-red" id="br33">
+			<img src="images/blazing-red/dice03-4.png" alt="Dice" class="diceimg blazing-red" id="br34">
+			<img src="images/blazing-red/dice03-5.png" alt="Dice" class="diceimg blazing-red" id="br35">
+			<img src="images/blazing-red/dice03-6.png" alt="Dice" class="diceimg blazing-red" id="br36">
+			<img src="images/blazing-red/dice04-1.png" alt="Dice" class="diceimg blazing-red" id="br41">
+			<img src="images/blazing-red/dice04-2.png" alt="Dice" class="diceimg blazing-red" id="br42">
+			<img src="images/blazing-red/dice04-3.png" alt="Dice" class="diceimg blazing-red" id="br43">
+			<img src="images/blazing-red/dice04-4.png" alt="Dice" class="diceimg blazing-red" id="br44">
+			<img src="images/blazing-red/dice04-5.png" alt="Dice" class="diceimg blazing-red" id="br45">
+			<img src="images/blazing-red/dice04-6.png" alt="Dice" class="diceimg blazing-red" id="br46">
+		</div>
+
+
 	</div>
 
-	<button class="btn-1"><i class="addon"></i>base</button>
-	<button class="btn-2"><i class="addon"></i>arcade</button>
-	<button class="btn-3"><i class="addon"></i>blazing red</button>
+	<script>
+		function roll() {
 
-	<script src="../../challenges.js"></script>
-    </body>
+			for (i = 1; i < 5; i++) {
+				for (j = 1; j < 7; j++) {
+					document.getElementById("a" + i + "" + j).style.display = "none";
+					document.getElementById("b" + i + "" + j).style.display = "none";
+					document.getElementById("br" + i + "" + j).style.display = "none";
+				}
+			}
+
+			var arcade = document.getElementById("arcade").checked;
+			var base = document.getElementById("base").checked;
+			var blazing_red = document.getElementById("blazing-red").checked;
+
+			if (arcade == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) + 1;
+					document.getElementById("a" + i + "" + dice).style.display = "block";
+				}
+			}
+			if (base == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) + 1;
+					document.getElementById("b" + i + "" + dice).style.display = "block";
+				}
+			}
+			if (blazing_red == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) + 1;
+					document.getElementById("br" + i + "" + dice).style.display = "block";
+				}
+			}
+
+		}
+	</script>
+</body>
+
 </html>
