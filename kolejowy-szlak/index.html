@@ -49,6 +49,13 @@
 			</label>
 		</div>
 
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="deep-blue">
+			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
+				deep-blue
+			</label>
+		</div>
+
 		<div class="container">
 			<img src="images/arcade/dice01-1.png" alt="Dice" class="diceimg arcade" id="a11">
 			<img src="images/arcade/dice01-2.png" alt="Dice" class="diceimg arcade" id="a12">
@@ -130,6 +137,32 @@
 			<img src="images/blazing-red/dice04-6.png" alt="Dice" class="diceimg blazing-red" id="br46">
 		</div>
 
+		<div class="container">
+			<img src="images/deep-blue/dice01-1.png" alt="Dice" class="diceimg arcade" id="db11">
+			<img src="images/deep-blue/dice01-2.png" alt="Dice" class="diceimg arcade" id="db12">
+			<img src="images/deep-blue/dice01-3.png" alt="Dice" class="diceimg arcade" id="db13">
+			<img src="images/deep-blue/dice01-4.png" alt="Dice" class="diceimg arcade" id="db14">
+			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg arcade" id="db15">
+			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg arcade" id="db16">
+			<img src="images/deep-blue/dice02-1.png" alt="Dice" class="diceimg arcade" id="db21">
+			<img src="images/deep-blue/dice02-2.png" alt="Dice" class="diceimg arcade" id="db22">
+			<img src="images/deep-blue/dice02-3.png" alt="Dice" class="diceimg arcade" id="db23">
+			<img src="images/deep-blue/dice02-4.png" alt="Dice" class="diceimg arcade" id="db24">
+			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg arcade" id="db25">
+			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg arcade" id="db26">
+			<img src="images/deep-blue/dice03-1.png" alt="Dice" class="diceimg arcade" id="db31">
+			<img src="images/deep-blue/dice03-2.png" alt="Dice" class="diceimg arcade" id="db32">
+			<img src="images/deep-blue/dice03-3.png" alt="Dice" class="diceimg arcade" id="db33">
+			<img src="images/deep-blue/dice03-4.png" alt="Dice" class="diceimg arcade" id="db34">
+			<img src="images/deep-blue/dice03-5.png" alt="Dice" class="diceimg arcade" id="db35">
+			<img src="images/deep-blue/dice03-6.png" alt="Dice" class="diceimg arcade" id="db36">
+			<img src="images/deep-blue/dice04-1.png" alt="Dice" class="diceimg arcade" id="db41">
+			<img src="images/deep-blue/dice04-2.png" alt="Dice" class="diceimg arcade" id="db42">
+			<img src="images/deep-blue/dice04-3.png" alt="Dice" class="diceimg arcade" id="db43">
+			<img src="images/deep-blue/dice04-4.png" alt="Dice" class="diceimg arcade" id="db44">
+			<img src="images/deep-blue/dice04-5.png" alt="Dice" class="diceimg arcade" id="db45">
+			<img src="images/deep-blue/dice04-6.png" alt="Dice" class="diceimg arcade" id="db46">
+		</div>
 
 	</div>
 
@@ -141,12 +174,14 @@
 					document.getElementById("a" + i + "" + j).style.display = "none";
 					document.getElementById("b" + i + "" + j).style.display = "none";
 					document.getElementById("br" + i + "" + j).style.display = "none";
+					document.getElementById("db" + i + "" + j).style.display = "none";
 				}
 			}
 
 			var arcade = document.getElementById("arcade").checked;
 			var base = document.getElementById("base").checked;
 			var blazing_red = document.getElementById("blazing-red").checked;
+			var deep_blue = document.getElementById("deep-blue").checked;
 
 			if (arcade == true) {
 				for (i = 1; i < 5; i++) {
@@ -166,8 +201,15 @@
 					document.getElementById("br" + i + "" + dice).style.display = "block";
 				}
 			}
+			if (deep_blue == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) +1;
+					document.getElementById("db" + i + "" + dice).style.display = "block";
+				}
+			}
 
 		}
+
 	</script>
 </body>
 
