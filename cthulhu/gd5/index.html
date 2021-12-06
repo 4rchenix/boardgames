@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="../style-dice.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<base href="..\images\">
+        <title>Boardgames Cthulhu</title>
+    </head>
+
+    <body>
+	    <p></p>
+	    <button class="btn-home" onclick="window.location.href='../'"><i class="fa fa-home"></i></button>
+	    <button class="btn-files" onclick="window.open('https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp','_blank'); return false;"><i class="fa fa-folder"></i></button>
+	    <button class="btn-pp" onclick="window.open('https://gameplay.archenix.pl/about-me/','_blank'); return false;"><i class="fa fa-user-circle-o"></i></button>
+	    <button class="btn-bgg" onclick="window.open('https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die', '_blank'); return false;"><i class="fa fa-info"></i></button>
+        <div class="wrapper clearfix">
+    <div class="player-0-panel active">
+	    <div class="player-name" id="name-0"></div>
+	    <div class="player-score" id="score-0"></div>
+	    <div class="player-current-box">
+		   <div class="player-current-label"></div>
+		   <div class="player-current-score" id="current-0"></div>
+            </div>
+    </div>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            
+        <img src="dice-1.png" alt="Dice" class="dice1 dice" id="dice-1">
+            <img src="dice-2.png" alt="Dice" class="dice1 dice" id="dice-2">
+        <img src="dice-3.png" alt="Dice" class="dice1 dice" id="dice-3">
+
+        <img src="dice-1g.png" alt="Dice" class="dice1 diceg" id="dice-1g">
+        <img src="dice-2g.png" alt="Dice" class="dice2 diceg" id="dice-2g">
+        <img src="dice-3g.png" alt="Dice" class="dice2 diceg" id="dice-3g">
+        <img src="dice-4g.png" alt="Dice" class="dice2 diceg" id="dice-4g">
+        <img src="dice-5g.png" alt="Dice" class="dice2 diceg" id="dice-5g">
+<!--        <img src="dice-6g.png" alt="Dice" class="dice3 diceg" id="dice-6g">
+        <img src="dice-7g.png" alt="Dice" class="dice3 diceg" id="dice-7g">
+        <img src="dice-8g.png" alt="Dice" class="dice3 diceg" id="dice-8g">
+        <img src="dice-9g.png" alt="Dice" class="dice3 diceg" id="dice-9g">    
+-->
+        </div>
+	    
+        <script src="../../challenges.js"></script>
+    </body>
+</html>
