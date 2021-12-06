@@ -1,8 +1,29 @@
+#dice-1 { top: 80px; }
+#dice-2 { top: 200px; }
+#dice-3 { top: 320px; }
+
+#dice-1g { top: 440px; }
+#dice-2g { top: 80px; }
+#dice-3g { top: 200px; }
+#dice-4g { top: 320px; }
+#dice-5g { top: 440px; }
+
+#dice-6g { top: 80px; }
+#dice-7g { top: 200px; }
+#dice-8g { top: 320px; }
+#dice-9g { top: 440px; }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 body {
@@ -14,15 +35,6 @@ body {
     position: relative;
     height: 100vh;
     color: #555;
-}
-
-.header {
-  padding: 80px;
-  text-align: left;
-  text-size: auto;
-  color: white;
-  font-size: 30px;
-  margin-left: 1%;
 }
 
 .btn-home {
@@ -77,9 +89,26 @@ body {
   background-color: #1f7597;
 }
 
+
+.wrapper {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: none;
+    overflow: hidden;
+}
+.player-0-panel {
+    color: black;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
 button {
     position: absolute;
-    width: 100px;
+    width: 150px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -112,21 +141,63 @@ button:focus {
     transition: margin 0.3s;
 }
 
-.btn-roll { top: 503px;}
+.btn-roll { top: 550px;}
 .btn-home { left: 35%;}
 .btn-files { left: 10%;}
 .btn-bgg { left: 90%;}
 .btn-pp { left: 65%;}
 
-.btn-1 { top: 200px; left: 150px;}
-.btn-2 { top: 300px; left: 150px;}
-.btn-3 { top: 400px; left: 150px;}
-.btn-4 { top: 500px; left: 150px;}
-.btn-5 { top: 600px; left: 150px;}
-.btn-6 { top: 200px; left: 300px;}
-.btn-7 { top: 300px; left: 300px;}
-.btn-8 { top: 400px; left: 300px;}
-.btn-9 { top: 500px; left: 300px;}
-.btn-10 { top: 600px; left: 300px;}
+.dice1 {
+    position: absolute;
+    left: 20%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.dice2 {
+    position: absolute;
+    left: 80%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.dice3 {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
 
 .dice-selected { border: 3px solid red; }
+
+.diceimg{
+  width: 150px; 
+  height: 150px;
+}
+
+.container{
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.base{
+    display: none;
+}
+
+.arcade{
+  display: none;
+}
+
+.blazing-red{
+  display: none;
+}
+
