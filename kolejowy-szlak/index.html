@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<title>Boardgames Cthulhu</title>
+	<title>Boardgames Railroad Ink</title>
 </head>
 
 <body>
@@ -28,20 +28,22 @@
 				<div class="player-current-score" id="current-0"></div>
 			</div>
 		</div>
+
 		<button class="btn-roll" onclick="roll()"><i class="ion-ios-loop"></i>Roll dice</button>
 
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="arcade">
-			<label class="form-check-label" for="flexCheckDefault" style="color: white;">
-				arcade
-			</label>
-		</div>
+
 		<div class="form-check">
 			<input class="form-check-input" type="checkbox" id="base">
 			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
 				base
 			</label>
 		</div>
+
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="arcade">
+			<label class="form-check-label" for="flexCheckDefault" style="color: white;">
+				arcade
+			</label>
 		<div class="form-check">
 			<input class="form-check-input" type="checkbox" id="blazing-red">
 			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
@@ -56,31 +58,18 @@
 			</label>
 		</div>
 
-		<div class="container">
-			<img src="images/arcade/dice01-1.png" alt="Dice" class="diceimg arcade" id="a11">
-			<img src="images/arcade/dice01-2.png" alt="Dice" class="diceimg arcade" id="a12">
-			<img src="images/arcade/dice01-3.png" alt="Dice" class="diceimg arcade" id="a13">
-			<img src="images/arcade/dice01-4.png" alt="Dice" class="diceimg arcade" id="a14">
-			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a15">
-			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a16">
-			<img src="images/arcade/dice02-1.png" alt="Dice" class="diceimg arcade" id="a21">
-			<img src="images/arcade/dice02-2.png" alt="Dice" class="diceimg arcade" id="a22">
-			<img src="images/arcade/dice02-3.png" alt="Dice" class="diceimg arcade" id="a23">
-			<img src="images/arcade/dice02-4.png" alt="Dice" class="diceimg arcade" id="a24">
-			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a25">
-			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a26">
-			<img src="images/arcade/dice03-1.png" alt="Dice" class="diceimg arcade" id="a31">
-			<img src="images/arcade/dice03-2.png" alt="Dice" class="diceimg arcade" id="a32">
-			<img src="images/arcade/dice03-3.png" alt="Dice" class="diceimg arcade" id="a33">
-			<img src="images/arcade/dice03-4.png" alt="Dice" class="diceimg arcade" id="a34">
-			<img src="images/arcade/dice03-5.png" alt="Dice" class="diceimg arcade" id="a35">
-			<img src="images/arcade/dice03-6.png" alt="Dice" class="diceimg arcade" id="a36">
-			<img src="images/arcade/dice04-1.png" alt="Dice" class="diceimg arcade" id="a41">
-			<img src="images/arcade/dice04-2.png" alt="Dice" class="diceimg arcade" id="a42">
-			<img src="images/arcade/dice04-3.png" alt="Dice" class="diceimg arcade" id="a43">
-			<img src="images/arcade/dice04-4.png" alt="Dice" class="diceimg arcade" id="a44">
-			<img src="images/arcade/dice04-5.png" alt="Dice" class="diceimg arcade" id="a45">
-			<img src="images/arcade/dice04-6.png" alt="Dice" class="diceimg arcade" id="a46">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="eldritch">
+			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
+				eldritch
+			</label>
+		</div>
+
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="electricity">
+			<label class="form-check-label" for="flexCheckChecked" style="color: white;">
+				electricity
+			</label>
 		</div>
 
 		<div class="container">
@@ -111,6 +100,33 @@
 		</div>
 
 		<div class="container">
+			<img src="images/arcade/dice01-1.png" alt="Dice" class="diceimg arcade" id="a11">
+			<img src="images/arcade/dice01-2.png" alt="Dice" class="diceimg arcade" id="a12">
+			<img src="images/arcade/dice01-3.png" alt="Dice" class="diceimg arcade" id="a13">
+			<img src="images/arcade/dice01-4.png" alt="Dice" class="diceimg arcade" id="a14">
+			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a15">
+			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a16">
+			<img src="images/arcade/dice02-1.png" alt="Dice" class="diceimg arcade" id="a21">
+			<img src="images/arcade/dice02-2.png" alt="Dice" class="diceimg arcade" id="a22">
+			<img src="images/arcade/dice02-3.png" alt="Dice" class="diceimg arcade" id="a23">
+			<img src="images/arcade/dice02-4.png" alt="Dice" class="diceimg arcade" id="a24">
+			<img src="images/arcade/dice01-5.png" alt="Dice" class="diceimg arcade" id="a25">
+			<img src="images/arcade/dice01-6.png" alt="Dice" class="diceimg arcade" id="a26">
+			<img src="images/arcade/dice03-1.png" alt="Dice" class="diceimg arcade" id="a31">
+			<img src="images/arcade/dice03-2.png" alt="Dice" class="diceimg arcade" id="a32">
+			<img src="images/arcade/dice03-3.png" alt="Dice" class="diceimg arcade" id="a33">
+			<img src="images/arcade/dice03-4.png" alt="Dice" class="diceimg arcade" id="a34">
+			<img src="images/arcade/dice03-5.png" alt="Dice" class="diceimg arcade" id="a35">
+			<img src="images/arcade/dice03-6.png" alt="Dice" class="diceimg arcade" id="a36">
+			<img src="images/arcade/dice04-1.png" alt="Dice" class="diceimg arcade" id="a41">
+			<img src="images/arcade/dice04-2.png" alt="Dice" class="diceimg arcade" id="a42">
+			<img src="images/arcade/dice04-3.png" alt="Dice" class="diceimg arcade" id="a43">
+			<img src="images/arcade/dice04-4.png" alt="Dice" class="diceimg arcade" id="a44">
+			<img src="images/arcade/dice04-5.png" alt="Dice" class="diceimg arcade" id="a45">
+			<img src="images/arcade/dice04-6.png" alt="Dice" class="diceimg arcade" id="a46">
+		</div>
+
+		<div class="container">
 			<img src="images/blazing-red/dice01-1.png" alt="Dice" class="diceimg blazing-red" id="br11">
 			<img src="images/blazing-red/dice01-2.png" alt="Dice" class="diceimg blazing-red" id="br12">
 			<img src="images/blazing-red/dice01-3.png" alt="Dice" class="diceimg blazing-red" id="br13">
@@ -138,30 +154,84 @@
 		</div>
 
 		<div class="container">
-			<img src="images/deep-blue/dice01-1.png" alt="Dice" class="diceimg arcade" id="db11">
-			<img src="images/deep-blue/dice01-2.png" alt="Dice" class="diceimg arcade" id="db12">
-			<img src="images/deep-blue/dice01-3.png" alt="Dice" class="diceimg arcade" id="db13">
-			<img src="images/deep-blue/dice01-4.png" alt="Dice" class="diceimg arcade" id="db14">
-			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg arcade" id="db15">
-			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg arcade" id="db16">
-			<img src="images/deep-blue/dice02-1.png" alt="Dice" class="diceimg arcade" id="db21">
-			<img src="images/deep-blue/dice02-2.png" alt="Dice" class="diceimg arcade" id="db22">
-			<img src="images/deep-blue/dice02-3.png" alt="Dice" class="diceimg arcade" id="db23">
-			<img src="images/deep-blue/dice02-4.png" alt="Dice" class="diceimg arcade" id="db24">
-			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg arcade" id="db25">
-			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg arcade" id="db26">
-			<img src="images/deep-blue/dice03-1.png" alt="Dice" class="diceimg arcade" id="db31">
-			<img src="images/deep-blue/dice03-2.png" alt="Dice" class="diceimg arcade" id="db32">
-			<img src="images/deep-blue/dice03-3.png" alt="Dice" class="diceimg arcade" id="db33">
-			<img src="images/deep-blue/dice03-4.png" alt="Dice" class="diceimg arcade" id="db34">
-			<img src="images/deep-blue/dice03-5.png" alt="Dice" class="diceimg arcade" id="db35">
-			<img src="images/deep-blue/dice03-6.png" alt="Dice" class="diceimg arcade" id="db36">
-			<img src="images/deep-blue/dice04-1.png" alt="Dice" class="diceimg arcade" id="db41">
-			<img src="images/deep-blue/dice04-2.png" alt="Dice" class="diceimg arcade" id="db42">
-			<img src="images/deep-blue/dice04-3.png" alt="Dice" class="diceimg arcade" id="db43">
-			<img src="images/deep-blue/dice04-4.png" alt="Dice" class="diceimg arcade" id="db44">
-			<img src="images/deep-blue/dice04-5.png" alt="Dice" class="diceimg arcade" id="db45">
-			<img src="images/deep-blue/dice04-6.png" alt="Dice" class="diceimg arcade" id="db46">
+			<img src="images/deep-blue/dice01-1.png" alt="Dice" class="diceimg deep-blue" id="db11">
+			<img src="images/deep-blue/dice01-2.png" alt="Dice" class="diceimg deep-blue" id="db12">
+			<img src="images/deep-blue/dice01-3.png" alt="Dice" class="diceimg deep-blue" id="db13">
+			<img src="images/deep-blue/dice01-4.png" alt="Dice" class="diceimg deep-blue" id="db14">
+			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg deep-blue" id="db15">
+			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg deep-blue" id="db16">
+			<img src="images/deep-blue/dice02-1.png" alt="Dice" class="diceimg deep-blue" id="db21">
+			<img src="images/deep-blue/dice02-2.png" alt="Dice" class="diceimg deep-blue" id="db22">
+			<img src="images/deep-blue/dice02-3.png" alt="Dice" class="diceimg deep-blue" id="db23">
+			<img src="images/deep-blue/dice02-4.png" alt="Dice" class="diceimg deep-blue" id="db24">
+			<img src="images/deep-blue/dice01-5.png" alt="Dice" class="diceimg deep-blue" id="db25">
+			<img src="images/deep-blue/dice01-6.png" alt="Dice" class="diceimg deep-blue" id="db26">
+			<img src="images/deep-blue/dice03-1.png" alt="Dice" class="diceimg deep-blue" id="db31">
+			<img src="images/deep-blue/dice03-2.png" alt="Dice" class="diceimg deep-blue" id="db32">
+			<img src="images/deep-blue/dice03-3.png" alt="Dice" class="diceimg deep-blue" id="db33">
+			<img src="images/deep-blue/dice03-4.png" alt="Dice" class="diceimg deep-blue" id="db34">
+			<img src="images/deep-blue/dice03-5.png" alt="Dice" class="diceimg deep-blue" id="db35">
+			<img src="images/deep-blue/dice03-6.png" alt="Dice" class="diceimg deep-blue" id="db36">
+			<img src="images/deep-blue/dice04-1.png" alt="Dice" class="diceimg deep-blue" id="db41">
+			<img src="images/deep-blue/dice04-2.png" alt="Dice" class="diceimg deep-blue" id="db42">
+			<img src="images/deep-blue/dice04-3.png" alt="Dice" class="diceimg deep-blue" id="db43">
+			<img src="images/deep-blue/dice04-4.png" alt="Dice" class="diceimg deep-blue" id="db44">
+			<img src="images/deep-blue/dice04-5.png" alt="Dice" class="diceimg deep-blue" id="db45">
+			<img src="images/deep-blue/dice04-6.png" alt="Dice" class="diceimg deep-blue" id="db46">
+		</div>
+
+		<div class="container">
+			<img src="images/eldritch/dice01-1.png" alt="Dice" class="diceimg eldritch" id="e11">
+			<img src="images/eldritch/dice01-2.png" alt="Dice" class="diceimg eldritch" id="e12">
+			<img src="images/eldritch/dice01-3.png" alt="Dice" class="diceimg eldritch" id="e13">
+			<img src="images/eldritch/dice01-4.png" alt="Dice" class="diceimg eldritch" id="e14">
+			<img src="images/eldritch/dice01-5.png" alt="Dice" class="diceimg eldritch" id="e15">
+			<img src="images/eldritch/dice01-6.png" alt="Dice" class="diceimg eldritch" id="e16">
+			<img src="images/eldritch/dice02-1.png" alt="Dice" class="diceimg eldritch" id="e21">
+			<img src="images/eldritch/dice02-2.png" alt="Dice" class="diceimg eldritch" id="e22">
+			<img src="images/eldritch/dice02-3.png" alt="Dice" class="diceimg eldritch" id="e23">
+			<img src="images/eldritch/dice02-4.png" alt="Dice" class="diceimg eldritch" id="e24">
+			<img src="images/eldritch/dice01-5.png" alt="Dice" class="diceimg eldritch" id="e25">
+			<img src="images/eldritch/dice01-6.png" alt="Dice" class="diceimg eldritch" id="e26">
+			<img src="images/eldritch/dice03-1.png" alt="Dice" class="diceimg eldritch" id="e31">
+			<img src="images/eldritch/dice03-2.png" alt="Dice" class="diceimg eldritch" id="e32">
+			<img src="images/eldritch/dice03-3.png" alt="Dice" class="diceimg eldritch" id="e33">
+			<img src="images/eldritch/dice03-4.png" alt="Dice" class="diceimg eldritch" id="e34">
+			<img src="images/eldritch/dice03-5.png" alt="Dice" class="diceimg eldritch" id="e35">
+			<img src="images/eldritch/dice03-6.png" alt="Dice" class="diceimg eldritch" id="e36">
+			<img src="images/eldritch/dice04-1.png" alt="Dice" class="diceimg eldritch" id="e41">
+			<img src="images/eldritch/dice04-2.png" alt="Dice" class="diceimg eldritch" id="e42">
+			<img src="images/eldritch/dice04-3.png" alt="Dice" class="diceimg eldritch" id="e43">
+			<img src="images/eldritch/dice04-4.png" alt="Dice" class="diceimg eldritch" id="e44">
+			<img src="images/eldritch/dice04-5.png" alt="Dice" class="diceimg eldritch" id="e45">
+			<img src="images/eldritch/dice04-6.png" alt="Dice" class="diceimg eldritch" id="e46">
+		</div>
+
+		<div class="container">
+			<img src="images/electricity/dice01-1.png" alt="Dice" class="diceimg electricity" id="ec11">
+			<img src="images/electricity/dice01-2.png" alt="Dice" class="diceimg electricity" id="ec12">
+			<img src="images/electricity/dice01-3.png" alt="Dice" class="diceimg electricity" id="ec13">
+			<img src="images/electricity/dice01-4.png" alt="Dice" class="diceimg electricity" id="ec14">
+			<img src="images/electricity/dice01-5.png" alt="Dice" class="diceimg electricity" id="ec15">
+			<img src="images/electricity/dice01-6.png" alt="Dice" class="diceimg electricity" id="ec16">
+			<img src="images/electricity/dice02-1.png" alt="Dice" class="diceimg electricity" id="ec21">
+			<img src="images/electricity/dice02-2.png" alt="Dice" class="diceimg electricity" id="ec22">
+			<img src="images/electricity/dice02-3.png" alt="Dice" class="diceimg electricity" id="ec23">
+			<img src="images/electricity/dice02-4.png" alt="Dice" class="diceimg electricity" id="ec24">
+			<img src="images/electricity/dice01-5.png" alt="Dice" class="diceimg electricity" id="ec25">
+			<img src="images/electricity/dice01-6.png" alt="Dice" class="diceimg electricity" id="ec26">
+			<img src="images/electricity/dice03-1.png" alt="Dice" class="diceimg electricity" id="ec31">
+			<img src="images/electricity/dice03-2.png" alt="Dice" class="diceimg electricity" id="ec32">
+			<img src="images/electricity/dice03-3.png" alt="Dice" class="diceimg electricity" id="ec33">
+			<img src="images/electricity/dice03-4.png" alt="Dice" class="diceimg electricity" id="ec34">
+			<img src="images/electricity/dice03-5.png" alt="Dice" class="diceimg electricity" id="ec35">
+			<img src="images/electricity/dice03-6.png" alt="Dice" class="diceimg electricity" id="ec36">
+			<img src="images/electricity/dice04-1.png" alt="Dice" class="diceimg electricity" id="ec41">
+			<img src="images/electricity/dice04-2.png" alt="Dice" class="diceimg electricity" id="ec42">
+			<img src="images/electricity/dice04-3.png" alt="Dice" class="diceimg electricity" id="ec43">
+			<img src="images/electricity/dice04-4.png" alt="Dice" class="diceimg electricity" id="ec44">
+			<img src="images/electricity/dice04-5.png" alt="Dice" class="diceimg electricity" id="ec45">
+			<img src="images/electricity/dice04-6.png" alt="Dice" class="diceimg electricity" id="ec46">
 		</div>
 
 	</div>
@@ -171,28 +241,33 @@
 
 			for (i = 1; i < 5; i++) {
 				for (j = 1; j < 7; j++) {
-					document.getElementById("a" + i + "" + j).style.display = "none";
 					document.getElementById("b" + i + "" + j).style.display = "none";
+					document.getElementById("a" + i + "" + j).style.display = "none";
 					document.getElementById("br" + i + "" + j).style.display = "none";
 					document.getElementById("db" + i + "" + j).style.display = "none";
+					document.getElementById("e" + i + "" + j).style.display = "none";
+					document.getElementById("ec" + i + "" + j).style.display = "none";
 				}
 			}
 
-			var arcade = document.getElementById("arcade").checked;
 			var base = document.getElementById("base").checked;
+			var arcade = document.getElementById("arcade").checked;
 			var blazing_red = document.getElementById("blazing-red").checked;
 			var deep_blue = document.getElementById("deep-blue").checked;
+			var eldritch = document.getElementById("eldritch").checked;
+			var electricity = document.getElementById("electricity").checked;
+			
+			if (base == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) + 1;
+					document.getElementById("b" + i + "" + dice).style.display = "block";
+				}
+			}
 
 			if (arcade == true) {
 				for (i = 1; i < 5; i++) {
 					dice = Math.floor(Math.random() * 6) + 1;
 					document.getElementById("a" + i + "" + dice).style.display = "block";
-				}
-			}
-			if (base == true) {
-				for (i = 1; i < 5; i++) {
-					dice = Math.floor(Math.random() * 6) + 1;
-					document.getElementById("b" + i + "" + dice).style.display = "block";
 				}
 			}
 			if (blazing_red == true) {
@@ -207,9 +282,19 @@
 					document.getElementById("db" + i + "" + dice).style.display = "block";
 				}
 			}
-
-		}
-
+			if (eldritch == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) +1;
+					document.getElementById("e" + i + "" + dice).style.display = "block";
+				}
+			}
+			if (electricity == true) {
+				for (i = 1; i < 5; i++) {
+					dice = Math.floor(Math.random() * 6) +1;
+					document.getElementById("ec" + i + "" + dice).style.display = "block";
+				}
+			}
+		 }
 	</script>
 </body>
 
