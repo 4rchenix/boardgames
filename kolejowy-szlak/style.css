@@ -74,21 +74,26 @@ body {
   background-color: #1f7597;
 }
 
-.wrapper {
-    width: 90%;
-    position: absolute;
-    top: 600px;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    background-color: none;
-    overflow: hidden;
+.checklist{
+  position: absolute;
+  top: 10%;	
+  left: 6%;
 }
 
-.player-0-panel {
-    color: black;
-    float: left;
-    height: 300px;
-    padding: 100px;
+.diceimg{
+  width: 150px; 
+  height: 150px;
+}
+
+.container{
+  position: relative;
+  top: 500px;
+  width: 100%;
+  max-height: 1000px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: auto;
 }
 
 button {
@@ -109,12 +114,9 @@ button {
 
 button:hover { font-weight: 600; }
 button:hover { margin-right: 20px; }
+button:focus { outline: none;}
 
-button:focus {
-    outline: none;
-}
-
- {
+{
     color: #EB4D4D;
     background-color: #1F7597;
     display: inline-block;
@@ -126,72 +128,33 @@ button:focus {
     transition: margin 0.3s;
 }
 
-.btn-roll { top: 250px;}
+.btn-roll {
+    top: 40%; 
+    left: 80%;
+    font-size: 25px;
+    background-color: #1F7597; 
+    border-radius: 5px;
+    font-family: Lato;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+
+}
 .btn-home { left: 35%;}
 .btn-files { left: 10%;}
 .btn-bgg { left: 90%;}
 .btn-pp { left: 65%;}
 
-
-/*.dice-selected { border: 3px solid red; }*/
-
-.diceimg{
-  width: 150px; 
-  height: 150px;
-}
-
-.container{
-  width: 100%;
-  max-height: 500px;
-  overflow: auto;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-
-.base{
-    display: none;
-}
-
-.arcade{
-  display: none;
-}
-
-.blazing-red{
-  display: none;
-}
-
-.deep-blue{
-  display: none;
-}
-
-.eldritch{
-  display: none;
-}
-
-.electricity{
-  display: none;
-}
-
-.engineer{
-  display: none;
-}
-
-.futuristic{
-  display: none;
-}
-
-.lush-green{
-  display: none;
-}
-
-.shining-yellow{
-  display: none;
-}
-
-.sky{
-  display: none;
-}
-
-.underground{
-  display: none;
-}
+.base { display: none;}
+.arcade { display: none;}
+.blazing-red { display: none;}
+.deep-blue { display: none;}
+.eldritch { display: none;}
+.electricity { display: none;}
+.engineer { display: none;}
+.futuristic { display: none;}
+.lush-green { display: none;}
+.shining-yellow { display: none;}
+.sky { display: none;}
+.underground { display: none;}
