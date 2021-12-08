@@ -96,7 +96,7 @@ body {
   grid-template-rows: auto;
   align-self: end;
   justify-self: end;
-  background-image: url(./back-dice.jpg);
+  background-color: #1F7597;
   background-size: cover;
 }
 
