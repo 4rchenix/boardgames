@@ -55,15 +55,17 @@ code {
 }
 
 /* 
-
 The following vars come from my theme. 
 You'll need to replace with your own color values. 
-
 - "$light"
 - "$mid"
 - "$dark"
-
 */
+.toggle-title {
+  font-size: 1.1em;
+  text-align: left;
+  margin: 8px 8px 16px 8px;
+}
 .toggle {
   align-items: center;
   border-radius: 100px;
