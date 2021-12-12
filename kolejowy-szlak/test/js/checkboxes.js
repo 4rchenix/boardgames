@@ -1,27 +1,9 @@
-<<<<<<< HEAD
 const checkboxes = {
 	"base": ["base"],
 	"arcade": ["galactic-invaders", "pluck-man", "rainbow", "tetromino"],
 	"blazing-red": ["lava", "meteor"],
 	"deep-blue": ["lake", "river"],
 	"eldritch": ["investigation", "portal", "ritual", "tentacles"],
-=======
-
-const checkboxes = {
-	'base': ['base'],
-	"arcade": ["galactic-invaders",
-		"pluck-man",
-		"rainbow",
-		"tetromino",
-	],
-	"blazing-red": ["lava", "meteor"],
-	"deep-blue": ["lake", "river"],
-	"eldritch": ["investigation",
-		"portal",
-		"ritual",
-		"tentacles",
-	],
->>>>>>> 898d94caf0420d6408ff6c25a3511c34c5475c88
 	"electricity": ["power-grid", "street-lamps"],
 	"engineer": ["construction", "renovation", "separation", "special"],
 	"futuristic": ["alien-farmer", "city-builder", "superconnection"],
