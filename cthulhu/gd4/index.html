@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="../style-dice.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="../style-dice.css">
+	<link type="text/css" rel="stylesheet" href="../continue-button-dice.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<base href="..\images\">
         <title>Boardgames Cthulhu</title>
-    </head>
+</head>
 
-    <body>
-	    <p></p>
-	    <button class="btn-home" onclick="window.location.href='../'"><i class="fa fa-home"></i></button>
-	    <button class="btn-files" onclick="window.open('https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp','_blank'); return false;"><i class="fa fa-folder"></i></button>
-	    <button class="btn-pp" onclick="window.open('https://gameplay.archenix.pl/about-me/','_blank'); return false;"><i class="fa fa-user-circle-o"></i></button>
-	    <button class="btn-bgg" onclick="window.open('https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die', '_blank'); return false;"><i class="fa fa-info"></i></button>
-        <div class="wrapper clearfix">
-    <div class="player-0-panel active">
-	    <div class="player-name" id="name-0"></div>
-	    <div class="player-score" id="score-0"></div>
-	    <div class="player-current-box">
-		   <div class="player-current-label"></div>
-		   <div class="player-current-score" id="current-0"></div>
-            </div>
-    </div>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            
-        <img src="dice-1.png" alt="Dice" class="dice1 dice" id="dice-1">
-            <img src="dice-2.png" alt="Dice" class="dice1 dice" id="dice-2">
-        <img src="dice-3.png" alt="Dice" class="dice1 dice" id="dice-3">
+<body>
+	<navbar class = "navbar desktop">
+		<a href="../" class="item">
+			Home
+		</a>
+		<a href="https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp" class="item" target="_blank">
+			Google Drive
+		</a>
+		<a href="https://gameplay.archenix.pl/about-me/" class="item" target="_blank">
+			Archenix
+		</a>
+		<a href="https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die" class="item" target="_blank">
+			Game Info
+		</a>
+	</navbar>
+	<navbar class = "navbar mobile">
+		<a href="../" class="item" id = "mhome">
+			Home
+		</a>
+		<div id="myLinks" class = "myLinks">
+			<a href="https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp" class="item mobile-item" target="_blank">
+				Google Drive
+			</a>
+			<a href="https://gameplay.archenix.pl/about-me/" class="item mobile-item" target="_blank">
+				Archenix
+			</a>
+			<a href="https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die" class="item mobile-item" target="_blank">
+				Game Info
+			</a>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</navbar>
 
-        <img src="dice-1g.png" alt="Dice" class="dice1 diceg" id="dice-1g">
-        <img src="dice-2g.png" alt="Dice" class="dice2 diceg" id="dice-2g">
-        <img src="dice-3g.png" alt="Dice" class="dice2 diceg" id="dice-3g">
-        <img src="dice-4g.png" alt="Dice" class="dice2 diceg" id="dice-4g">
-<!--        <img src="dice-5g.png" alt="Dice" class="dice2 diceg" id="dice-5g">
-        <img src="dice-6g.png" alt="Dice" class="dice3 diceg" id="dice-6g">
-        <img src="dice-7g.png" alt="Dice" class="dice3 diceg" id="dice-7g">
-        <img src="dice-8g.png" alt="Dice" class="dice3 diceg" id="dice-8g">
-        <img src="dice-9g.png" alt="Dice" class="dice3 diceg" id="dice-9g">    
+	<div class="container">
+	
+		<div class="upper">
+			<div class="challenges" id = "challenges">
+				<!-- Javascript fills this to look cleaner -->
+			</div>
+			<button class = "btn-roll continue"><i class="ion-ios-loop"></i>Roll Dice</button>
+		        <img src="../images/dice-1.png" alt="Dice" class="dice1 dice" id="dice-1">
+		        <img src="../images/dice-2.png" alt="Dice" class="dice2 dice" id="dice-2">
+		        <img src="../images/dice-3.png" alt="Dice" class="dice3 dice" id="dice-3">
+        		<img src="../images/dice-1g.png" alt="Dice" class="dice4 diceg" id="dice-1g">
+		        <img src="../images/dice-2g.png" alt="Dice" class="dice5 diceg" id="dice-2g">
+        		<img src="../images/dice-3g.png" alt="Dice" class="dice6 diceg" id="dice-3g">
+        		<img src="../images/dice-4g.png" alt="Dice" class="dice7 diceg" id="dice-4g">
+<!--        		<img src="../images/dice-5g.png" alt="Dice" class="dice8 diceg" id="dice-5g">
+        		<img src="../images/dice-6g.png" alt="Dice" class="dice9 diceg" id="dice-6g">
+        		<img src="../images/dice-7g.png" alt="Dice" class="dice10 diceg" id="dice-7g">
+        		<img src="../images/dice-8g.png" alt="Dice" class="dice11 diceg" id="dice-8g">
+        		<img src="../images/dice-9g.png" alt="Dice" class="dice12 diceg" id="dice-9g">    
 -->
-        </div>
-	    
-        <script src="../../challenges.js"></script>
-    </body>
+		</div>
+	</div>
+
+	<script src="../challenges.js"></script>
+	<script src="../mobile-navbar.js"></script>
+</body>
+
 </html>

@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="continue-button.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <title>Boardgames Cthulu</title>
-    </head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<base href=".\images\">
+        <title>Boardgames</title>
+</head>
 
-    <body>
-	<p></p>
-	<button class="btn-home" onclick="window.location.href='../../'"><i class="fa fa-home"></i></button>
-	<button class="btn-files" onclick="window.open('https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp','_blank'); return false;"><i class="fa fa-folder"></i></button>
-	<button class="btn-pp" onclick="window.open('https://gameplay.archenix.pl/about-me/','_blank'); return false;"><i class="fa fa-user-circle-o"></i></button>
-	<button class="btn-bgg" onclick="window.open('https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die', '_blank'); return false;"><i class="fa fa-info"></i></button>	 
+<body>
+	<navbar class = "navbar desktop">
+		<a href="../../" class="item">
+			Home
+		</a>
+		<a href="https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp" class="item" target="_blank">
+			Google Drive
+		</a>
+		<a href="https://gameplay.archenix.pl/about-me/" class="item" target="_blank">
+			Archenix
+		</a>
+		<a href="https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die" class="item" target="_blank">
+			Game Info
+		</a>
+	</navbar>
+	<navbar class = "navbar mobile">
+		<a href="../../" class="item" id = "mhome">
+			Home
+		</a>
+		<div id="myLinks" class = "myLinks">
+			<a href="https://drive.google.com/drive/folders/1uQocw6BFw6WrIAfdTgl_VqiGjxZDAkUp" class="item mobile-item" target="_blank">
+				Google Drive
+			</a>
+			<a href="https://gameplay.archenix.pl/about-me/" class="item mobile-item" target="_blank">
+				Archenix
+			</a>
+			<a href="https://boardgamegeek.com/boardgame/253344/cthulhu-death-may-die" class="item mobile-item" target="_blank">
+				Game Info
+			</a>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</navbar>
+	<p class="ex1">
+	Pick the Green dice number:
+	</p>
+	<div class="container">
 	
-	<div class="header">
-		<p>How many Green dice do you need?</p>
+		<div class="upper">
+			<button class="btn-1 continue" onclick="window.location.href='../bd'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>0</button>
+			<button class="btn-2 continue" onclick="window.location.href='../gd1'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>1</button>
+			<button class="btn-3 continue" onclick="window.location.href='../gd2'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>2</button>
+			<button class="btn-4 continue" onclick="window.location.href='../gd3'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>3</button>	
+			<button class="btn-5 continue" onclick="window.location.href='../gd4'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>4</button>	
+			<button class="btn-6 continue" onclick="window.location.href='../gd5'" rel="noopener norefererrer" target="blank" ><i class="ion-ios-loop"></i>5</button>	
+			<button class="btn-7 continue" onclick="window.location.href='../gd6'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>6</button>
+			<button class="btn-8 continue" onclick="window.location.href='../gd7'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>7</button>
+			<button class="btn-9 continue" onclick="window.location.href='../gd8'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>8</button>
+			<button class="btn-10 continue" onclick="window.location.href='../gd9'" rel="noopener noreferrer" target="blank" ><i class="ion-ios-loop"></i>9</button>
+			<p></p>
+		</div>
 	</div>
+	<script src="../mobile-navbar.js"></script>
+</body>
 
-	<button class="btn-1" onclick="window.location.href='./bd/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>0</button>
-	<button class="btn-2" onclick="window.location.href='./gd1/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>1</button>
-	<button class="btn-3" onclick="window.location.href='./gd2/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>2</button>
-	<button class="btn-4" onclick="window.location.href='./gd3/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>3</button>
-	<button class="btn-5" onclick="window.location.href='./gd4/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>4</button>
-	<button class="btn-6" onclick="window.location.href='./gd5/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>5</button>
-	<button class="btn-7" onclick="window.location.href='./gd6/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>6</button>
-	<button class="btn-8" onclick="window.location.href='./gd7/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>7</button>
-	<button class="btn-9" onclick="window.location.href='./gd8/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>8</button>
-	<button class="btn-10" onclick="window.location.href='./gd9/'" rel="noopener noreferrer" target="blank" ><i class="fa fa-cube"></i>9</button>
-    </body>
 </html>
