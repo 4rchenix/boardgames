@@ -44,6 +44,23 @@
     width: 100%;
   }
   
+/* from kajoj new button class*/
+
+.continue2 {
+  border: 2px white solid;
+  border-radius: 25px;
+  padding: 0.75rem 1.25rem;
+  background-color: rgb(0, 140, 175);
+  color: white;
+  text-transform: uppercase;
+  margin: 1em;
+  width: 15em;
+}
+.continue2:hover {
+   background-color: #121943;
+   cursor: pointer;
+}
+/* end */
   /* optional reset for presentation */
   * {
     font-family: Arial;
