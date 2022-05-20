@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="./style.css">
+	<link type="text/css" rel="stylesheet" href="./continue-button.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<base href=".\images\">
+        <title>Boardgames Małe Epickie Pozdziemia</title>
+</head>
+
+<body>
+	<navbar class = "navbar desktop">
+		<a href="../../" class="item">
+			Home
+		</a>
+		<a href="https://drive.google.com/drive/folders/1DuX5vGrbCAWgl49CJypLs3yCfY0NeoRV?usp=sharing" class="item" target="_blank">
+			Google Drive
+		</a>
+		<a href="https://gameplay.archenix.pl/about-me/" class="item" target="_blank">
+			Archenix
+		</a>
+		<a href="https://boardgamegeek.com/boardgame/331787/tiny-epic-dungeons" class="item" target="_blank">
+			Game Info
+		</a>
+	</navbar>
+	<navbar class = "navbar mobile">
+		<a href="../../" class="item" id = "mhome">
+			Home
+		</a>
+		<div id="myLinks" class = "myLinks">
+			<a href="https://drive.google.com/drive/folders/1DuX5vGrbCAWgl49CJypLs3yCfY0NeoRV?usp=sharing" class="item mobile-item" target="_blank">
+				Google Drive
+			</a>
+			<a href="https://gameplay.archenix.pl/about-me/" class="item mobile-item" target="_blank">
+				Archenix
+			</a>
+			<a href="https://boardgamegeek.com/boardgame/331787/tiny-epic-dungeons" class="item mobile-item" target="_blank">
+				Game Info
+			</a>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</navbar>
+
+	<div class="container">
+	
+		<div class="upper">
+			<div class="challenges" id = "challenges">
+				<!-- Javascript fills this to look cleaner -->
+			</div>
+			<button class = "btn-roll continue"><i class="ion-ios-loop"></i>Roll Dice</button>
+		        <img src="./images/dice-1.png" alt="Dice" class="dice1 dice" id="dice-1">
+		        <img src="./images/dice-2.png" alt="Dice" class="dice2 dice" id="dice-2">
+        		<img src="./images/dice-3.png" alt="Dice" class="dice3 dice" id="dice-3">
+		        <img src="./images/dice-1g.png" alt="Dice" class="dice4 diceg" id="dice-1g">
+		</div>
+	</div>
+
+	<script src="../challenges.js"></script>
+	<script src="../mobile-navbar.js"></script>
+</body>
+
+</html>
